@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MyPortfolio.Models.AboutMe>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/PortAdmin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MeProfile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MeEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MePhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MeAbout)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MeProfile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MeEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MePhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MeAbout)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

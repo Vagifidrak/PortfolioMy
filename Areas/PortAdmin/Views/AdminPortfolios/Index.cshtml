@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MyPortfolio.Models.Portfolio>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/PortAdmin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Portİmg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Portİnfo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PortCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PortDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="width:25%">
+            <div>
+                <img style="width:100%" class="img-fluid" src="@item.Portİmg" alt="Alternate Text" />
+            </div>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Portİnfo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PortCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PortDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

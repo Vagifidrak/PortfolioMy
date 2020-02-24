@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DevPortfolioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AboutMe">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MeProfile" Type="nvarchar" MaxLength="50" />
+          <Property Name="MeEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="MePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="MeAbout" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="AboutSkill">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SkillName" Type="nvarchar" MaxLength="10" />
+          <Property Name="SkillWhith" Type="nvarchar" MaxLength="5" />
+          <Property Name="SkilWhithPercent" Type="nvarchar" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="Blog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Blogİmg" Type="nvarchar" MaxLength="250" />
+          <Property Name="BlogName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BogDescription" Type="nvarchar" MaxLength="250" />
+          <Property Name="BlogCategory" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Header">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Activity" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="İnformation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="İnfoTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="İnfoDescription" Type="nvarchar" MaxLength="250" />
+          <Property Name="İnfoLocat" Type="nvarchar" MaxLength="250" />
+          <Property Name="İnfoNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="İnfoMail" Type="nvarchar" MaxLength="30" />
+          <Property Name="İnfoİcon" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Opinion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Opinionİmg" Type="nvarchar" MaxLength="250" />
+          <Property Name="OpinionName" Type="nvarchar" MaxLength="50" />
+          <Property Name="OpinionDescription" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Portfolio">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Portİmg" Type="nvarchar" MaxLength="300" />
+          <Property Name="Portİnfo" Type="nvarchar" MaxLength="50" />
+          <Property Name="PortCategory" Type="nvarchar" MaxLength="50" />
+          <Property Name="PortDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Services">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="İcon" Type="nvarchar" MaxLength="250" />
+          <Property Name="ServicesName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ServicesDescription" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="ServicesCounter">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Counterİcon" Type="nvarchar" MaxLength="250" />
+          <Property Name="CounterNum" Type="nvarchar" MaxLength="10" />
+          <Property Name="CounterText" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="DevPortfolioModelStoreContainer">
+          <EntitySet Name="AboutMe" EntityType="Self.AboutMe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AboutSkill" EntityType="Self.AboutSkill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Header" EntityType="Self.Header" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="İnformation" EntityType="Self.İnformation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Opinion" EntityType="Self.Opinion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Portfolio" EntityType="Self.Portfolio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServicesCounter" EntityType="Self.ServicesCounter" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DevPortfolioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Blog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Blogİmg" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BlogName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BogDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BlogCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Header">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Activity" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="İnformation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="İnfoTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="İnfoDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="İnfoLocat" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="İnfoNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="İnfoMail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="İnfoİcon" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Opinion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Opinionİmg" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="OpinionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OpinionDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Portfolio">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Portİmg" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Portİnfo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PortCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PortDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="İcon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ServicesName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ServicesDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ServicesCounter">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Counterİcon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CounterNum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CounterText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DevPortfolioDP" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Blogs" EntityType="Self.Blog" />
+          <EntitySet Name="Headers" EntityType="Self.Header" />
+          <EntitySet Name="İnformation" EntityType="Self.İnformation" />
+          <EntitySet Name="Opinions" EntityType="Self.Opinion" />
+          <EntitySet Name="Portfolios" EntityType="Self.Portfolio" />
+          <EntitySet Name="Services" EntityType="Self.Service" />
+          <EntitySet Name="ServicesCounters" EntityType="Self.ServicesCounter" />
+          <EntitySet Name="AboutMes" EntityType="DevPortfolioModel.AboutMe" />
+          <EntitySet Name="AboutSkills" EntityType="DevPortfolioModel.AboutSkill" />
+        </EntityContainer>
+        <EntityType Name="AboutMe">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="MeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MeProfile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MeEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MeAbout" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AboutSkill">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SkillName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SkillWhith" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="SkilWhithPercent" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DevPortfolioModelStoreContainer" CdmEntityContainer="DevPortfolioDP">
+          <EntitySetMapping Name="Blogs">
+            <EntityTypeMapping TypeName="DevPortfolioModel.Blog">
+              <MappingFragment StoreEntitySet="Blog">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Blogİmg" ColumnName="Blogİmg" />
+                <ScalarProperty Name="BlogName" ColumnName="BlogName" />
+                <ScalarProperty Name="BogDescription" ColumnName="BogDescription" />
+                <ScalarProperty Name="BlogCategory" ColumnName="BlogCategory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Headers">
+            <EntityTypeMapping TypeName="DevPortfolioModel.Header">
+              <MappingFragment StoreEntitySet="Header">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="İnformation">
+            <EntityTypeMapping TypeName="DevPortfolioModel.İnformation">
+              <MappingFragment StoreEntitySet="İnformation">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="İnfoTitle" ColumnName="İnfoTitle" />
+                <ScalarProperty Name="İnfoDescription" ColumnName="İnfoDescription" />
+                <ScalarProperty Name="İnfoLocat" ColumnName="İnfoLocat" />
+                <ScalarProperty Name="İnfoNumber" ColumnName="İnfoNumber" />
+                <ScalarProperty Name="İnfoMail" ColumnName="İnfoMail" />
+                <ScalarProperty Name="İnfoİcon" ColumnName="İnfoİcon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Opinions">
+            <EntityTypeMapping TypeName="DevPortfolioModel.Opinion">
+              <MappingFragment StoreEntitySet="Opinion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Opinionİmg" ColumnName="Opinionİmg" />
+                <ScalarProperty Name="OpinionName" ColumnName="OpinionName" />
+                <ScalarProperty Name="OpinionDescription" ColumnName="OpinionDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Portfolios">
+            <EntityTypeMapping TypeName="DevPortfolioModel.Portfolio">
+              <MappingFragment StoreEntitySet="Portfolio">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Portİmg" ColumnName="Portİmg" />
+                <ScalarProperty Name="Portİnfo" ColumnName="Portİnfo" />
+                <ScalarProperty Name="PortCategory" ColumnName="PortCategory" />
+                <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Services">
+            <EntityTypeMapping TypeName="DevPortfolioModel.Service">
+              <MappingFragment StoreEntitySet="Services">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="İcon" ColumnName="İcon" />
+                <ScalarProperty Name="ServicesName" ColumnName="ServicesName" />
+                <ScalarProperty Name="ServicesDescription" ColumnName="ServicesDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServicesCounters">
+            <EntityTypeMapping TypeName="DevPortfolioModel.ServicesCounter">
+              <MappingFragment StoreEntitySet="ServicesCounter">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Counterİcon" ColumnName="Counterİcon" />
+                <ScalarProperty Name="CounterNum" ColumnName="CounterNum" />
+                <ScalarProperty Name="CounterText" ColumnName="CounterText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AboutMes">
+            <EntityTypeMapping TypeName="DevPortfolioModel.AboutMe">
+              <MappingFragment StoreEntitySet="AboutMe">
+                <ScalarProperty Name="MeAbout" ColumnName="MeAbout" />
+                <ScalarProperty Name="MePhone" ColumnName="MePhone" />
+                <ScalarProperty Name="MeEmail" ColumnName="MeEmail" />
+                <ScalarProperty Name="MeProfile" ColumnName="MeProfile" />
+                <ScalarProperty Name="MeName" ColumnName="MeName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AboutSkills">
+            <EntityTypeMapping TypeName="DevPortfolioModel.AboutSkill">
+              <MappingFragment StoreEntitySet="AboutSkill">
+                <ScalarProperty Name="SkilWhithPercent" ColumnName="SkilWhithPercent" />
+                <ScalarProperty Name="SkillWhith" ColumnName="SkillWhith" />
+                <ScalarProperty Name="SkillName" ColumnName="SkillName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

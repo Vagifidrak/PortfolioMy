@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MyPortfolio.Models.Service>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/PortAdmin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.İcon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServicesName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServicesDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.İcon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServicesName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServicesDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

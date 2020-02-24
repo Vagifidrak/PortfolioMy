@@ -1,0 +1,43 @@
+﻿@model MyPortfolio.Models.Service
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/PortAdmin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Service</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.İcon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.İcon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServicesName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServicesName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServicesDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServicesDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

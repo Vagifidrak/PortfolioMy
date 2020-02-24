@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DevPortfolioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AboutMe">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MeProfile" Type="nvarchar" MaxLength="50" />
+    <Property Name="MeEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="MePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="MeAbout" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="AboutSkill">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SkillName" Type="nvarchar" MaxLength="10" />
+    <Property Name="SkillWhith" Type="nvarchar" MaxLength="5" />
+    <Property Name="SkilWhithPercent" Type="nvarchar" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Blogİmg" Type="nvarchar" MaxLength="250" />
+    <Property Name="BlogName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BogDescription" Type="nvarchar" MaxLength="250" />
+    <Property Name="BlogCategory" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Header">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Activity" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="İnformation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="İnfoTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="İnfoDescription" Type="nvarchar" MaxLength="250" />
+    <Property Name="İnfoLocat" Type="nvarchar" MaxLength="250" />
+    <Property Name="İnfoNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="İnfoMail" Type="nvarchar" MaxLength="30" />
+    <Property Name="İnfoİcon" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Opinion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Opinionİmg" Type="nvarchar" MaxLength="250" />
+    <Property Name="OpinionName" Type="nvarchar" MaxLength="50" />
+    <Property Name="OpinionDescription" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Portfolio">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Portİmg" Type="nvarchar" MaxLength="300" />
+    <Property Name="Portİnfo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PortCategory" Type="nvarchar" MaxLength="50" />
+    <Property Name="PortDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="İcon" Type="nvarchar" MaxLength="250" />
+    <Property Name="ServicesName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ServicesDescription" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="ServicesCounter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Counterİcon" Type="nvarchar" MaxLength="250" />
+    <Property Name="CounterNum" Type="nvarchar" MaxLength="10" />
+    <Property Name="CounterText" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="DevPortfolioModelStoreContainer">
+    <EntitySet Name="AboutMe" EntityType="Self.AboutMe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AboutSkill" EntityType="Self.AboutSkill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Header" EntityType="Self.Header" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="İnformation" EntityType="Self.İnformation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Opinion" EntityType="Self.Opinion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Portfolio" EntityType="Self.Portfolio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServicesCounter" EntityType="Self.ServicesCounter" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

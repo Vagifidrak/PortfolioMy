@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DevPortfolioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Blogİmg" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BlogName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BogDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BlogCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Header">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Activity" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="İnformation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="İnfoTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="İnfoDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="İnfoLocat" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="İnfoNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="İnfoMail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="İnfoİcon" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Opinion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Opinionİmg" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="OpinionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OpinionDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Portfolio">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Portİmg" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Portİnfo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PortCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PortDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="İcon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ServicesName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ServicesDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ServicesCounter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Counterİcon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CounterNum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CounterText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DevPortfolioDP" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Blogs" EntityType="Self.Blog" />
+    <EntitySet Name="Headers" EntityType="Self.Header" />
+    <EntitySet Name="İnformation" EntityType="Self.İnformation" />
+    <EntitySet Name="Opinions" EntityType="Self.Opinion" />
+    <EntitySet Name="Portfolios" EntityType="Self.Portfolio" />
+    <EntitySet Name="Services" EntityType="Self.Service" />
+    <EntitySet Name="ServicesCounters" EntityType="Self.ServicesCounter" />
+    <EntitySet Name="AboutMes" EntityType="DevPortfolioModel.AboutMe" />
+    <EntitySet Name="AboutSkills" EntityType="DevPortfolioModel.AboutSkill" />
+  </EntityContainer>
+  <EntityType Name="AboutMe">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="MeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MeProfile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MeEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MeAbout" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AboutSkill">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SkillName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SkillWhith" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="SkilWhithPercent" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

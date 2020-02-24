@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DevPortfolioModelStoreContainer" CdmEntityContainer="DevPortfolioDP">
+    <EntitySetMapping Name="Blogs">
+      <EntityTypeMapping TypeName="DevPortfolioModel.Blog">
+        <MappingFragment StoreEntitySet="Blog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Blogİmg" ColumnName="Blogİmg" />
+          <ScalarProperty Name="BlogName" ColumnName="BlogName" />
+          <ScalarProperty Name="BogDescription" ColumnName="BogDescription" />
+          <ScalarProperty Name="BlogCategory" ColumnName="BlogCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Headers">
+      <EntityTypeMapping TypeName="DevPortfolioModel.Header">
+        <MappingFragment StoreEntitySet="Header">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Activity" ColumnName="Activity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="İnformation">
+      <EntityTypeMapping TypeName="DevPortfolioModel.İnformation">
+        <MappingFragment StoreEntitySet="İnformation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="İnfoTitle" ColumnName="İnfoTitle" />
+          <ScalarProperty Name="İnfoDescription" ColumnName="İnfoDescription" />
+          <ScalarProperty Name="İnfoLocat" ColumnName="İnfoLocat" />
+          <ScalarProperty Name="İnfoNumber" ColumnName="İnfoNumber" />
+          <ScalarProperty Name="İnfoMail" ColumnName="İnfoMail" />
+          <ScalarProperty Name="İnfoİcon" ColumnName="İnfoİcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Opinions">
+      <EntityTypeMapping TypeName="DevPortfolioModel.Opinion">
+        <MappingFragment StoreEntitySet="Opinion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Opinionİmg" ColumnName="Opinionİmg" />
+          <ScalarProperty Name="OpinionName" ColumnName="OpinionName" />
+          <ScalarProperty Name="OpinionDescription" ColumnName="OpinionDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Portfolios">
+      <EntityTypeMapping TypeName="DevPortfolioModel.Portfolio">
+        <MappingFragment StoreEntitySet="Portfolio">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Portİmg" ColumnName="Portİmg" />
+          <ScalarProperty Name="Portİnfo" ColumnName="Portİnfo" />
+          <ScalarProperty Name="PortCategory" ColumnName="PortCategory" />
+          <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="DevPortfolioModel.Service">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="İcon" ColumnName="İcon" />
+          <ScalarProperty Name="ServicesName" ColumnName="ServicesName" />
+          <ScalarProperty Name="ServicesDescription" ColumnName="ServicesDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicesCounters">
+      <EntityTypeMapping TypeName="DevPortfolioModel.ServicesCounter">
+        <MappingFragment StoreEntitySet="ServicesCounter">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Counterİcon" ColumnName="Counterİcon" />
+          <ScalarProperty Name="CounterNum" ColumnName="CounterNum" />
+          <ScalarProperty Name="CounterText" ColumnName="CounterText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AboutMes">
+      <EntityTypeMapping TypeName="DevPortfolioModel.AboutMe">
+        <MappingFragment StoreEntitySet="AboutMe">
+          <ScalarProperty Name="MeAbout" ColumnName="MeAbout" />
+          <ScalarProperty Name="MePhone" ColumnName="MePhone" />
+          <ScalarProperty Name="MeEmail" ColumnName="MeEmail" />
+          <ScalarProperty Name="MeProfile" ColumnName="MeProfile" />
+          <ScalarProperty Name="MeName" ColumnName="MeName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AboutSkills">
+      <EntityTypeMapping TypeName="DevPortfolioModel.AboutSkill">
+        <MappingFragment StoreEntitySet="AboutSkill">
+          <ScalarProperty Name="SkilWhithPercent" ColumnName="SkilWhithPercent" />
+          <ScalarProperty Name="SkillWhith" ColumnName="SkillWhith" />
+          <ScalarProperty Name="SkillName" ColumnName="SkillName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
